@@ -14,8 +14,8 @@
             </nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/about">
-              About
+            <nuxt-link to="/blogs">
+              Blogs
             </nuxt-link>
           </li>
         </ul>
