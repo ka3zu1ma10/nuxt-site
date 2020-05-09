@@ -4,6 +4,7 @@
     <ul>
       <li v-for="param in blogDates">
         <nuxt-link :to="param.url">{{ param.title }}</nuxt-link>
+         <img :src="'/ogp/blog-' + param.id + '.png'" />
       </li>
     </ul>
   </main>
@@ -28,7 +29,8 @@ export default {
           title: fileMap[key]["title"],
           tags: fileMap[key]["tags"],
           description: fileMap[key]["description"],
-          url: "/blogs/" + baseDate[0] + "/" + endUrl[0]
+          url: "/blogs/" + baseDate[0] + "/" + endUrl[0],
+          id: fileMap[key]["id"]
         };
         params.push(param);
       });

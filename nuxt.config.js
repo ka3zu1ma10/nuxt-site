@@ -13,6 +13,22 @@ const generateDynamicRoutes = callback => {
   callback(null, routes)
 }
 
+const generaterOGP = () => {
+  const routes = []
+  const fs = require('fs')
+  const fileNames = fs.readdirSync('./contents/blogs/json/')
+  for (const key in fileNames) {
+  const page = JSON.parse(
+    fs.readFileSync('./contents/blogs/json/' + fileNames[key], 'utf8')
+  )
+  routes.push({
+    route: '/ogp-' + page.id,
+    payload: page
+  })
+  }
+  callback(null, routes)
+}
+
 export default {
   mode: 'universal',
   head: {
@@ -43,6 +59,7 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/style-resources',
+    '@/modules/ogpGenerater'
   ],
   styleResources: {
   },
@@ -53,7 +70,7 @@ export default {
     html: true,
   },
   generate: {
-    routes: generateDynamicRoutes
+    routes: [generateDynamicRoutes, generaterOGP]
   },
   sitemap: {
     path: '/sitemap.xml',

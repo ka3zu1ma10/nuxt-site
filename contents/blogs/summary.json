@@ -8,6 +8,7 @@
       "draft": false,
       "description": "Nuxt.jsでつくったブログのテンプレート",
       "tags": "JavaScript,Nuxt.js",
+      "thumbnail": "default.png",
       "dir": "contents/blogs/json",
       "base": "2020-05-06_test.json",
       "ext": ".json",

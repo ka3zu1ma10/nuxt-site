@@ -34,7 +34,9 @@ export default {
         { hid: 'og:description', property: 'og:description', content: desc },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:url', property: 'og:url', content: url },
-        { hid: 'og:title', property: 'og:title', content: title }
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:image', property: 'og:image', content: 'https://ka-zu-ma.com/ogp/ogp-' + this.params.id + '.png'
+        },
       ],
       link: [{ rel: 'canonical', href: url }]
     }
