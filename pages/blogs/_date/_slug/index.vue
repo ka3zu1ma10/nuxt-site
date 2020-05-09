@@ -24,7 +24,7 @@ export default {
     return Object.assign({}, require(`~/contents/blogs/json/${params.date}_${params.slug}.json`), { params })
   },
   head() {
-    const title = this.title + " | kazuma-saitoh"
+    const title = this.title + " | kazuma-saito"
     const url = `${this.url}blogs/${this.params.date}/${this.params.slug}/`
     const desc = this.description || ''
     return {
@@ -35,7 +35,7 @@ export default {
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:url', property: 'og:url', content: url },
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:image', property: 'og:image', content: 'https://ka-zu-ma.com/ogp/ogp-' + this.params.id + '.png'
+        { hid: 'og:image', property: 'og:image', content: 'https://ka-zu-ma.com/ogp/blog-' + params.id + '.png'
         },
       ],
       link: [{ rel: 'canonical', href: url }]
