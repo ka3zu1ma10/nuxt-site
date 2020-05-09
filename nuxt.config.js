@@ -33,9 +33,7 @@ export default {
   },
   loading: { color: '#fff' },
   css: [
-    // { src: '~/assets/css/common.scss', lang: 'scss' },
-    // { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
-    // '@fortawesome/fontawesome-free/css/all.css'
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
   ],
   plugins: [
   ],
@@ -45,14 +43,8 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/style-resources',
-    // ["@nuxtjs/google-analytics", {
-    //   id: "UA-XXXXXX-X"
-    // }]
   ],
   styleResources: {
-    scss: [
-      // './assets/css/_mixins.scss'
-      ]
   },
   markdownit: {
     preset: 'default',
@@ -65,7 +57,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://sample.com/',
+    hostname: 'https://ka-zu-ma.com/',
     exclude: [
       '/about'
     ],
