@@ -28,12 +28,17 @@ body {
 
 a {
   text-decoration: none;
+  &:focus,&:hover {
+    text-decoration-line: underline;
+  }
+  &:link{
+    color: $colour_main_green;
+  }
+  &:visited {
+    color: $colour_accent_cherry;
+  }
 }
 
-a:focus,
-a:hover {
-  text-decoration-line: underline;
-}
 
 #body {
   .page {
@@ -46,7 +51,7 @@ a:hover {
 
 .cherry {
   font-size: 1.2em;
-  color: #fc3a52;
+  color: $colour_accent_cherry;
   white-space: nowrap;
 }
 

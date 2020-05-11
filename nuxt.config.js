@@ -29,18 +29,20 @@ const generaterOGP = () => {
   callback(null, routes)
 }
 
+const SITE_TITLE = 'kazuma-saitoh';
+
 export default {
   mode: 'universal',
   head: {
-    title: 'kazuma-saitoh',
+    title: SITE_TITLE,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.jsでつくったブログのテンプレート' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'nuxt_blog_sample' },
+      { hid: 'og:site_name', property: 'og:site_name', content: SITE_TITLE },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:title', property: 'og:title', content: 'nuxt_blog_sample' },
-      { hid: 'og:url', property: 'og:url', content: 'https://sample.com/' },
+      { hid: 'og:title', property: 'og:title', content: SITE_TITLE },
+      { hid: 'og:url', property: 'og:url', content: 'https://ka-zu-ma.com/' },
       { hid: 'og:description', property: 'og:description', content: 'Nuxt.jsでつくったブログのテンプレート' },
     ],
     link: [
@@ -62,6 +64,10 @@ export default {
     '@/modules/ogpGenerater'
   ],
   styleResources: {
+    scss: [
+      '~/assets/sass/variable/_index.scss',
+      '~/assets/sass/mixin/_index.scss'
+      ]
   },
   markdownit: {
     preset: 'default',

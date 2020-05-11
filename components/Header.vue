@@ -27,7 +27,7 @@
 <style lang="scss" scoped>
 
 .hd {
-  background-color: #1c4220;
+  background-color: $colour_main_green;
   border-bottom: solid 0.2rem #fff;
   position: -webkit-sticky;
   position: sticky;

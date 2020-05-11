@@ -114,8 +114,8 @@
 
   .max_icon {
     border-radius: 50%;
-    border: solid 0.2rem  #1c4220;
-    background-color: #1c4220;
+    border: solid 0.2rem  $colour_main_green;
+    background-color: $colour_main_green;
     display: block;
     height: 2em;
     width: 2em;

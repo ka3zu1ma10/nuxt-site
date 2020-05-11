@@ -8,9 +8,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "md": "processmd contents/blogs/md/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json",
+    "md": "processmd contents/blogs/md/**/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json",
     "generate": "nuxt generate",
-    "deploy": "processmd contents/blogs/md/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json && nuxt generate"
+    "deploy": "processmd contents/blogs/md/**/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json && nuxt generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",

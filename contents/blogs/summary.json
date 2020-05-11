@@ -1,10 +1,25 @@
 {
   "fileMap": {
+    "contents/blogs/json/2020-05-06_test2.json": {
+      "id": 1,
+      "title": "Nuxt.jsでブログをつくる2",
+      "created_at": "2019/01/01",
+      "updated_at": "2019/01/01",
+      "draft": false,
+      "description": "Nuxt.jsでつくったブログのテンプレート",
+      "tags": "JavaScript,Nuxt.js",
+      "thumbnail": "default.png",
+      "dir": "contents/blogs/json",
+      "base": "2020-05-06_test2.json",
+      "ext": ".json",
+      "sourceBase": "2020-05-06_test2.md",
+      "sourceExt": ".md"
+    },
     "contents/blogs/json/2020-05-06_test.json": {
       "id": 1,
       "title": "Nuxt.jsでブログをつくる",
-      "created_at": "2019-01-01T00:00:00.000Z",
-      "updated_at": "2019-01-01T00:00:00.000Z",
+      "created_at": "2019/01/01",
+      "updated_at": "2019/01/01",
       "draft": false,
       "description": "Nuxt.jsでつくったブログのテンプレート",
       "tags": "JavaScript,Nuxt.js",
@@ -17,6 +32,7 @@
     }
   },
   "sourceFileArray": [
-    "contents/blogs/md/2020-05-06_test.md"
+    "contents/blogs/md/2020-05-06_test.md",
+    "contents/blogs/md/2020-05-06_test2.md"
   ]
 }
