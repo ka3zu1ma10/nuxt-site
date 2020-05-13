@@ -50,33 +50,33 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.blog{
-  &_list{
+.blog {
+  &_list {
     list-style: none;
     padding: 1rem;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
   }
-  &_item{
+  &_item {
     background-color: #fff;
-    padding: .5rem;
-    margin: 0 .5rem;
-    border-radius: .2rem;
-    box-shadow: .2rem .2rem .2rem rgba($color: #000000, $alpha: .2);
-    &-wraper{
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.2);
+    &-wraper {
       position: relative;
       box-sizing: border-box;
     }
-    &:not(:last-child){
-      margin-bottom: .8rem;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
     }
   }
-  &_title{
-   font-size: 1.5rem; 
-   display: block;
-   padding-bottom: 1.5rem;
+  &_title {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 1.5rem;
   }
 
-  &_date{
+  &_date {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -84,7 +84,7 @@ export default {
     width: 100%;
   }
 
-  &_tags{
+  &_tags {
     flex: 1;
   }
 }

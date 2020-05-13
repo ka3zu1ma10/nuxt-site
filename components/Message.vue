@@ -1,37 +1,30 @@
 <template>
   <div class="page_wrap">
-    <img
-      class="max_img"
-      src="~/assets/kazuma.png"
-      alt="写真：kazuma saitoの全力の笑顔"
-    >
+    <img class="max_img" src="~/assets/img/kazuma.png" alt="写真：kazuma saitoの全力の笑顔" />
     <article class="max_message">
       <h2 class="max_name">
-        <img
-          class="max_icon"
-          src="~/assets/kazuma-icon.png"
-          alt="写真：kazuma saitoの全力の笑顔"
-        >
+        <img class="max_icon" src="~/assets/img/kazuma-icon.png" alt="写真：kazuma saitoの全力の笑顔" />
         <div class="max_name-text">
           <div class="max_name-eg">
-            <span class="cherry">K</span>azuma <span class="cherry">S</span>aito
+            <span class="cherry">K</span>azuma
+            <span class="cherry">S</span>aito
           </div>
-          <div
-            class="max_name-jp"
-            aria-label="日本語表記"
-          >
-            西藤 和馬
-          </div>
+          <div class="max_name-jp" aria-label="日本語表記">西藤 和馬</div>
         </div>
       </h2>
       <section class="max_mes">
         <h3 class="max_mes-h">
-          <span class="max_mes-h--blank">1人でも多くの人を<span class="cherry">笑顔</span>にできる</span>
-          <span class="max_mes-h--blank"><span class="cherry">UXデザイナー</span>を目指しています。</span>
+          <span class="max_mes-h--blank">
+            1人でも多くの人を
+            <span class="cherry">笑顔</span>にできる
+          </span>
+          <span class="max_mes-h--blank">
+            <span class="cherry">UXデザイナー</span>を目指しています。
+          </span>
         </h3>
         <p>
-          まだまだ、修行中ですが、<br>
-          一緒に働く人、自分が携わったものに携わる人、もちろん自分が携わったものを使う人達が、少しでも笑顔でいられるようなデザインを考えていきたいと思っています。
+          まだまだ、修行中ですが、
+          <br />一緒に働く人、自分が携わったものに携わる人、もちろん自分が携わったものを使う人達が、少しでも笑顔でいられるようなデザインを考えていきたいと思っています。
         </p>
       </section>
     </article>
@@ -114,7 +107,7 @@
 
   .max_icon {
     border-radius: 50%;
-    border: solid 0.2rem  $colour_main_green;
+    border: solid 0.2rem $colour_main_green;
     background-color: $colour_main_green;
     display: block;
     height: 2em;

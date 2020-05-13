@@ -2,15 +2,18 @@
   <div id="body">
     <Header />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -20,32 +23,37 @@ export default {
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: 'M PLUS 1p', sans-serif;
+#body {
+  font-family: "M PLUS 1p", sans-serif;
   font-size: medium;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background-color: $colour_main_green;
+  .page {
+    &_wrap {
+      width: 100%;
+      max-width: 56rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+  }
+}
+main {
+  flex: 1;
 }
 
 a {
   text-decoration: none;
-  &:focus,&:hover {
+  &:focus,
+  &:hover {
     text-decoration-line: underline;
   }
-  &:link{
+  &:link {
     color: $colour_main_green;
   }
   &:visited {
     color: $colour_accent_cherry;
-  }
-}
-
-
-#body {
-  .page {
-    &_wrap {
-      max-width: 56rem;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -54,5 +62,4 @@ a {
   color: $colour_accent_cherry;
   white-space: nowrap;
 }
-
 </style>

@@ -27,6 +27,7 @@ export default {
 
   &_top {
     padding-bottom: 0;
+    background-color: #fff;
   }
 
   &_back-green {

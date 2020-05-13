@@ -2,21 +2,15 @@
   <header class="hd">
     <div class="page_wrap">
       <div class="hd_logo">
-        <nuxt-link to="/">
-          Kazuma Saitoh
-        </nuxt-link>
+        <nuxt-link to="/">Kazuma Saitoh</nuxt-link>
       </div>
       <nav>
         <ul class="hd_nav">
           <li class="hd_nav__item">
-            <nuxt-link to="/">
-              Home
-            </nuxt-link>
+            <nuxt-link to="/">Home</nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/blogs">
-              Blogs
-            </nuxt-link>
+            <nuxt-link to="/blogs">Blogs</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -25,14 +19,12 @@
 </template>
 
 <style lang="scss" scoped>
-
 .hd {
   background-color: $colour_main_green;
   border-bottom: solid 0.2rem #fff;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
 
   .page_wrap {
     display: flex;
@@ -66,5 +58,4 @@
     }
   }
 }
-
 </style>
