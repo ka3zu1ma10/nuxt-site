@@ -36,6 +36,7 @@ export default {
       max-width: 56rem;
       margin: 0 auto;
       box-sizing: border-box;
+      padding: 0.8rem 1rem;
     }
   }
 }
