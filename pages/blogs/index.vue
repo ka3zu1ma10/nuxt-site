@@ -41,7 +41,9 @@ export default {
           id: fileMap[key]["id"],
           create: fileMap[key]["created_at"]
         };
-        params.push(param);
+        if(!fileMap[key]["draft"]){
+          params.push(param);
+        }
       });
 
       return params;
