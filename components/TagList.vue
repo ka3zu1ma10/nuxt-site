@@ -1,14 +1,21 @@
 <template>
   <ul class="tagList">
-    <li class="tagList_item" v-for="tag in Tags">{{ tag }}</li>
+    <li v-for="tag in tags" :key="tag" class="tagList_item">
+      {{ tag }}
+    </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'TagList',
-  props: ['Tags']
-};
+  name: "TagList",
+  props: {
+    tags: {
+      type: Array,
+      default: () => ["NotTag"],
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

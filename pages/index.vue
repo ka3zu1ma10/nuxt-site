@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import Message from '~/components/Message.vue';
-import Profile from '~/components/Profile.vue';
+import Message from "~/components/Message.vue"
+import Profile from "~/components/Profile.vue"
 
 export default {
   components: {
     Message,
-    Profile
-  }
+    Profile,
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -37,7 +37,7 @@ export default {
 }
 @media (max-width: 600px) {
   .section {
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
 }
 </style>

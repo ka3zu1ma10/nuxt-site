@@ -1,11 +1,13 @@
 <template>
   <PageLayout title="Blogs">
     <ul class="blog_list">
-      <li class="blog_item" v-for="param in blogDates">
+      <li v-for="param in blogDates" :key="param" class="blog_item">
         <div class="blog_item-wraper">
-          <nuxt-link class="blog_title" :to="param.url">{{ param.title }}</nuxt-link>
+          <nuxt-link class="blog_title" :to="param.url">
+            {{ param.title }}
+          </nuxt-link>
           <div class="blog_date">
-            <TagList class="blog_tags" :Tags="param.tags" />
+            <TagList class="blog_tags" :tags="param.tags" />
             <div>{{ param.create }}</div>
           </div>
         </div>
@@ -14,24 +16,24 @@
   </PageLayout>
 </template>
 <script>
-import { fileMap } from "../../contents/blogs/summary.json";
-import TagList from "../../components/TagList";
-import PageLayout from "../../components/PageLayout";
+import { fileMap } from "../../contents/blogs/summary.json"
+import TagList from "../../components/TagList"
+import PageLayout from "../../components/PageLayout"
 
 export default {
   components: {
     TagList,
-    PageLayout
+    PageLayout,
   },
   computed: {
     blogDates() {
-      const keys = Object.keys(fileMap);
+      const keys = Object.keys(fileMap)
 
-      let params = [];
-      keys.forEach(key => {
-        const base = fileMap[key]["base"];
-        const baseDate = base.split("_");
-        const endUrl = baseDate[1].split(".");
+      let params = []
+      keys.forEach((key) => {
+        const base = fileMap[key]["base"]
+        const baseDate = base.split("_")
+        const endUrl = baseDate[1].split(".")
 
         const param = {
           title: fileMap[key]["title"],
@@ -39,17 +41,17 @@ export default {
           description: fileMap[key]["description"],
           url: "/blogs/" + baseDate[0] + "/" + endUrl[0],
           id: fileMap[key]["id"],
-          create: fileMap[key]["created_at"]
-        };
-        if(!fileMap[key]["draft"]){
-          params.push(param);
+          create: fileMap[key]["created_at"],
         }
-      });
+        if (!fileMap[key]["draft"]) {
+          params.push(param)
+        }
+      })
 
-      return params;
-    }
-  }
-};
+      return params
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .blog {
@@ -92,10 +94,10 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .blog{
-    &_list{
+  .blog {
+    &_list {
       padding: 1rem 0;
-    } 
+    }
   }
 }
 </style>

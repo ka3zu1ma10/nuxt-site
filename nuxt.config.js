@@ -1,35 +1,37 @@
-const { sourceFileArray } = require("./contents/blogs/summary.json");
+const { sourceFileArray } = require("./contents/blogs/summary.json")
 
 const sourceFileNameToUrl = (filepath) => {
-  const deleteExt = filepath.replace(".md", "");
-  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1];
-  const splitArray = fileName.split("_");
-  return `/blogs/${splitArray[0]}/${splitArray[1]}`;
-};
+  const deleteExt = filepath.replace(".md", "")
+  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1]
+  const splitArray = fileName.split("_")
+  return `/blogs/${splitArray[0]}/${splitArray[1]}`
+}
 const generateDynamicRoutes = (callback) => {
   const routes = sourceFileArray.map((sourceFileName) => {
-    return sourceFileNameToUrl(sourceFileName);
-  });
-  callback(null, routes);
-};
+    return sourceFileNameToUrl(sourceFileName)
+  })
+  /* eslint no-unused-vars: 0 */
+  callback(null, routes)
+}
 
-const generaterOGP = () => {
-  const routes = [];
-  const fs = require("fs");
-  const fileNames = fs.readdirSync("./contents/blogs/json/");
+const generaterOGP = (callback) => {
+  const routes = []
+  const fs = require("fs")
+  const fileNames = fs.readdirSync("./contents/blogs/json/")
   for (const key in fileNames) {
     const page = JSON.parse(
       fs.readFileSync("./contents/blogs/json/" + fileNames[key], "utf8")
-    );
+    )
     routes.push({
       route: "/ogp-" + page.id,
       payload: page,
-    });
+    })
   }
-  callback(null, routes);
-};
 
-const SITE_TITLE = "kazuma-saitoh";
+  callback(null, routes)
+}
+
+const SITE_TITLE = "kazuma-saitoh"
 
 export default {
   mode: "universal",
@@ -95,4 +97,4 @@ export default {
   build: {
     extend(config, ctx) {},
   },
-};
+}
