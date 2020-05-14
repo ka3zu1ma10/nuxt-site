@@ -35,6 +35,7 @@
 .page_wrap {
   display: flex;
   align-items: center;
+  padding-bottom: 0 !important;
 }
 
 .max {
