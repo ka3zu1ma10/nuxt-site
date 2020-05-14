@@ -110,7 +110,7 @@
     border: solid 0.2rem $colour_main_green;
     background-color: $colour_main_green;
     display: block;
-    height: 4rem;
+    
     width: 4rem;
     margin-right: 0.4rem;
   }

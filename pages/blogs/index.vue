@@ -90,4 +90,12 @@ export default {
     flex: 1;
   }
 }
+
+@media (max-width: 600px) {
+  .blog{
+    &_list{
+      padding: 1rem 0;
+    } 
+  }
+}
 </style>

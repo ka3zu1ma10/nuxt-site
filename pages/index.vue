@@ -35,4 +35,9 @@ export default {
     color: #fff;
   }
 }
+@media (max-width: 600px) {
+  .section {
+    padding: 1rem .5rem;
+  }
+}
 </style>

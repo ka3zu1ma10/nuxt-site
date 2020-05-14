@@ -89,7 +89,15 @@ export default {
       h5,
       h6 {
         margin: 0.4rem 0 0.6rem;
+        padding: 0 .2rem;
         color: $colour_main_green;
+      }
+
+      h2{
+        border-bottom: solid 2px $colour_main_green;
+      }
+      h3{
+        border-left: solid 2px $colour_main_green;
       }
 
       ul,
@@ -126,6 +134,28 @@ export default {
           padding: 0.4rem;
           border: solid 1px $colour_main_green;
         }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .blog{
+    &_title{
+      font-size: 1.6rem;
+    }
+    &_body{
+        /deep/ {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0.2rem 0 0.4rem;
+      }
+      p{
+        margin: .8rem 0;
+      }
       }
     }
   }
