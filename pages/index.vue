@@ -23,14 +23,15 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding: 2rem 1rem;
-  color: #1c4220;
+  color: $colour_main_green;
 
   &_top {
     padding-bottom: 0;
+    background-color: #fff;
   }
 
   &_back-green {
-    background-color: #1c4220;
+    background-color: $colour_main_green;
     color: #fff;
   }
 }
