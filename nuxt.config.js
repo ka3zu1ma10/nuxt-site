@@ -84,6 +84,7 @@ export default {
   },
   generate: {
     routes: [generateDynamicRoutes, generaterOGP],
+    fallback: true,
   },
   sitemap: {
     path: "/sitemap.xml",

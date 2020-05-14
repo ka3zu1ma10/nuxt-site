@@ -15,21 +15,6 @@
       "sourceBase": "format_sanpl.md",
       "sourceExt": ".md"
     },
-    "contents/blogs/json/2020-05-14_blogStart.json": {
-      "id": 2,
-      "title": "なぜこのサイトを始めたのか",
-      "created_at": "2020/05/14",
-      "updated_at": "2020/05/14",
-      "draft": false,
-      "description": "なぜこのサイトを始めたのか",
-      "tags": "ブログ",
-      "thumbnail": "default.png",
-      "dir": "contents/blogs/json",
-      "base": "2020-05-14_blogStart.json",
-      "ext": ".json",
-      "sourceBase": "2020-05-14_blogStart.md",
-      "sourceExt": ".md"
-    },
     "contents/blogs/json/2020-05-14_myProfile.json": {
       "id": 1,
       "title": "Kazuma Saito と言う人物について",
@@ -43,6 +28,21 @@
       "base": "2020-05-14_myProfile.json",
       "ext": ".json",
       "sourceBase": "2020-05-14_myProfile.md",
+      "sourceExt": ".md"
+    },
+    "contents/blogs/json/2020-05-14_blogStart.json": {
+      "id": 2,
+      "title": "なぜこのサイトを始めたのか",
+      "created_at": "2020/05/14",
+      "updated_at": "2020/05/14",
+      "draft": false,
+      "description": "なぜこのサイトを始めたのか",
+      "tags": "ブログ",
+      "thumbnail": "default.png",
+      "dir": "contents/blogs/json",
+      "base": "2020-05-14_blogStart.json",
+      "ext": ".json",
+      "sourceBase": "2020-05-14_blogStart.md",
       "sourceExt": ".md"
     }
   },
