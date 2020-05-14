@@ -89,6 +89,7 @@ export default {
       h5,
       h6 {
         margin: 0.4rem 0 0.6rem;
+        color: $colour_main_green;
       }
 
       ul,
@@ -97,10 +98,15 @@ export default {
         padding-left: 1.4rem;
       }
 
+      p {
+        margin: 1.6rem 0;
+      }
+
       hr {
         border: d 1px $colour_main_green;
         margin-top: 0.8rem;
         margin-bottom: 0.8rem;
+        color: $colour_main_green;
       }
       blockquote {
         margin-left: 0.4rem;

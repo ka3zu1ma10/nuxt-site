@@ -3,7 +3,7 @@ id: 1
 title: Kazuma Saito と言う人物について
 created_at: 2020/05/14
 updated_at: 2020/05/14
-draft: true
+draft: false
 description: Kazuma Saito と言う人物について
 tags: 自己紹介,ブログ
 thumbnail: "default.png"
