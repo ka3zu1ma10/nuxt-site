@@ -41,7 +41,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Nuxt.jsでつくったブログのテンプレート",
+        content: "Kazuma Saitoのポートフォリオサイト",
       },
       { hid: "og:site_name", property: "og:site_name", content: SITE_TITLE },
       { hid: "og:type", property: "og:type", content: "website" },
@@ -50,7 +50,7 @@ export default {
       {
         hid: "og:description",
         property: "og:description",
-        content: "Nuxt.jsでつくったブログのテンプレート",
+        content: "Kazuma Saitoのポートフォリオサイト",
       },
     ],
     link: [
