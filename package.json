@@ -11,9 +11,11 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "md": "processmd contents/blogs/md/**/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json",
+    "png": "node modules/photSummaryGenerator.js ",
+    "mkjson": "run-s md pub",
     "generate": "nuxt generate",
-    "deploy": "run-s ms lintfix generate",
-    "pub": "run-s md lintfix generate build"
+    "deploy": "run-s md pub lintfix generate",
+    "pub": "run-s md pub lintfix generate build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
