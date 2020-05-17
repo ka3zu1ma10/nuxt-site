@@ -24,8 +24,14 @@ export default {
     LightBox,
   },
   data() {
+    let imgDate = []
+    ImgSummary.forEach((img) => {
+      img['loading'] = '/img/loading.png';
+      imgDate.push(img)
+    })
     return {
-      images: ImgSummary,
+      images: imgDate,
+      lightboximgs:ImgSummary
     }
   },
   methods: {
