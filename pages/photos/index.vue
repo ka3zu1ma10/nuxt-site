@@ -49,6 +49,7 @@ export default {
     display: flex;
     flex-flow: wrap;
     margin: 0 auto;
+    justify-content: center;
   }
   &_listItem {
     background-color: white;
