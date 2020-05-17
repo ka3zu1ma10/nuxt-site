@@ -9,7 +9,7 @@
       <h2 class="max_name">
         <img
           class="max_icon"
-          src="~/assets/img/kazuma-icon.png"
+          src="@/assets/img/kazuma-icon.png"
           alt="写真：kazuma saitoの全力の笑顔"
         />
         <div class="max_name-text">

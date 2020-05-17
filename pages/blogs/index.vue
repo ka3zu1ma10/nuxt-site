@@ -16,9 +16,9 @@
   </PageLayout>
 </template>
 <script>
-import { fileMap } from "../../contents/blogs/summary.json"
-import TagList from "../../components/TagList"
-import PageLayout from "../../components/PageLayout"
+import { fileMap } from "@/contents/blogs/summary.json"
+import TagList from "@/components/TagList"
+import PageLayout from "@/components/PageLayout"
 
 export default {
   components: {

@@ -18,6 +18,11 @@
               Blogs
             </nuxt-link>
           </li>
+          <li class="hd_nav__item">
+            <nuxt-link to="/photos">
+              Photos
+            </nuxt-link>
+          </li>
         </ul>
       </nav>
     </div>

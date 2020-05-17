@@ -6,6 +6,7 @@ const sourceFileNameToUrl = (filepath) => {
   const splitArray = fileName.split("_")
   return `/blogs/${splitArray[0]}/${splitArray[1]}`
 }
+
 const generateDynamicRoutes = (callback) => {
   const routes = sourceFileArray.map((sourceFileName) => {
     return sourceFileNameToUrl(sourceFileName)
@@ -63,14 +64,14 @@ export default {
   css: [
     { src: "~/node_modules/highlight.js/styles/hopscotch.css", lang: "css" },
   ],
-  plugins: [],
+  plugins: [{ src: "@/plugins/Lightbox.js" }],
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
     "@nuxtjs/style-resources",
-    "@/modules/ogpGenerater",
+    "@/modules/ogpGenerator",
   ],
   styleResources: {
     scss: [

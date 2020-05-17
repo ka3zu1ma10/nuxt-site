@@ -11,9 +11,13 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "md": "processmd contents/blogs/md/**/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json",
+    "jpg_copy": "node modules/copyPhotoDate.js ",
+    "jpg_summary": "node modules/photSummaryGenerator.js ",
+    "jpg": "run-s jpg_copy jpg_summary",
+    "mkjson": "run-s md jpg_summary",
     "generate": "nuxt generate",
-    "deploy": "run-s ms lintfix generate",
-    "pub": "run-s md lintfix generate build"
+    "deploy": "run-s md jpg_summary lintfix generate",
+    "pub": "run-s md jpg_summary lintfix generate build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
@@ -29,7 +33,9 @@
     "nuxt": "^2.0.0",
     "sharp": "^0.25.2",
     "text-to-svg": "^3.1.5",
-    "vuex": "^3.1.1"
+    "vue-image-lightbox": "^7.0.0",
+    "vue-lazyload": "^1.3.3",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
