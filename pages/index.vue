@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Message from "~/components/Message.vue"
-import Profile from "~/components/Profile.vue"
+import Message from "@/components/Message.vue"
+import Profile from "@/components/Profile.vue"
 
 export default {
   components: {

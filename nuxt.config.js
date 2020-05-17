@@ -1,38 +1,38 @@
-const { sourceFileArray } = require("./contents/blogs/summary.json");
+const { sourceFileArray } = require("./contents/blogs/summary.json")
 
 const sourceFileNameToUrl = (filepath) => {
-  const deleteExt = filepath.replace(".md", "");
-  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1];
-  const splitArray = fileName.split("_");
-  return `/blogs/${splitArray[0]}/${splitArray[1]}`;
-};
+  const deleteExt = filepath.replace(".md", "")
+  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1]
+  const splitArray = fileName.split("_")
+  return `/blogs/${splitArray[0]}/${splitArray[1]}`
+}
 
 const generateDynamicRoutes = (callback) => {
   const routes = sourceFileArray.map((sourceFileName) => {
-    return sourceFileNameToUrl(sourceFileName);
-  });
+    return sourceFileNameToUrl(sourceFileName)
+  })
   /* eslint no-unused-vars: 0 */
-  callback(null, routes);
-};
+  callback(null, routes)
+}
 
 const generaterOGP = (callback) => {
-  const routes = [];
-  const fs = require("fs");
-  const fileNames = fs.readdirSync("./contents/blogs/json/");
+  const routes = []
+  const fs = require("fs")
+  const fileNames = fs.readdirSync("./contents/blogs/json/")
   for (const key in fileNames) {
     const page = JSON.parse(
       fs.readFileSync("./contents/blogs/json/" + fileNames[key], "utf8")
-    );
+    )
     routes.push({
       route: "/ogp-" + page.id,
       payload: page,
-    });
+    })
   }
 
-  callback(null, routes);
-};
+  callback(null, routes)
+}
 
-const SITE_TITLE = "kazuma-saitoh";
+const SITE_TITLE = "kazuma-saitoh"
 
 export default {
   mode: "universal",
@@ -64,7 +64,7 @@ export default {
   css: [
     { src: "~/node_modules/highlight.js/styles/hopscotch.css", lang: "css" },
   ],
-  plugins: [],
+  plugins: [{ src: "@/plugins/Lightbox.js" }],
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
@@ -72,7 +72,6 @@ export default {
     "@nuxtjs/sitemap",
     "@nuxtjs/style-resources",
     "@/modules/ogpGenerator",
-    "@/modules/photoSummaryGenerator",
   ],
   styleResources: {
     scss: [
@@ -99,4 +98,4 @@ export default {
   build: {
     extend(config, ctx) {},
   },
-};
+}

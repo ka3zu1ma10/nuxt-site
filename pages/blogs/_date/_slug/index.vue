@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import { sourceFileArray } from "../../../../contents/blogs/summary.json"
-import TagList from "../../../../components/TagList"
+import { sourceFileArray } from "@/contents/blogs/summary.json"
+import TagList from "@/components/TagList"
 
 export default {
   components: {

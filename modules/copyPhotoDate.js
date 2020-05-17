@@ -1,19 +1,15 @@
-"use strict";
+"use strict"
 
-let fs = require("fs");
+let fs = require("fs")
 
-const MASTERFILESPATH = "../../../../../Volumes/ELECOM500/サイト/build/JPEG/";
+const MASTERFILESPATH = "../../../../../Volumes/ELECOM500/サイト/build/JPEG/"
 
 fs.readdir(MASTERFILESPATH, function (err, files) {
-  if (err) throw err;
+  if (err) throw err
 
   files.forEach((file) => {
-    fs.copyFile(
-      MASTERFILESPATH + file,
-      "contents/photos/img/" + file,
-      (err) => {
-        if (err) throw err;
-      }
-    );
-  });
-});
+    fs.copyFile(MASTERFILESPATH + file, "static/img/photos/" + file, (err) => {
+      if (err) throw err
+    })
+  })
+})
