@@ -3,7 +3,7 @@
     <div class="photos">
       <ul class="photo_list">
         <li v-for="(img, index) in images" :key="img" class="photo_listItem">
-          <img :src="img.src" class="photo_img" alt @click="openGallery(index)" />
+          <img v-lazy="img" class="photo_img" alt @click="openGallery(index)" />
         </li>
       </ul>
     </div>
