@@ -53,7 +53,7 @@ export default {
   &_listItem {
     background-color: white;
     padding: 0.2rem;
-    width: 25%;
+    width: 12rem;
     box-sizing: border-box;
     height: 8rem;
     border: solid 0.2rem $colour_main_green;
