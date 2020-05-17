@@ -1,52 +1,101 @@
+const { sourceFileArray } = require("./contents/blogs/summary.json")
+
+const sourceFileNameToUrl = (filepath) => {
+  const deleteExt = filepath.replace(".md", "")
+  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1]
+  const splitArray = fileName.split("_")
+  return `/blogs/${splitArray[0]}/${splitArray[1]}`
+}
+
+const generateDynamicRoutes = (callback) => {
+  const routes = sourceFileArray.map((sourceFileName) => {
+    return sourceFileNameToUrl(sourceFileName)
+  })
+  /* eslint no-unused-vars: 0 */
+  callback(null, routes)
+}
+
+const generaterOGP = (callback) => {
+  const routes = []
+  const fs = require("fs")
+  const fileNames = fs.readdirSync("./contents/blogs/json/")
+  for (const key in fileNames) {
+    const page = JSON.parse(
+      fs.readFileSync("./contents/blogs/json/" + fileNames[key], "utf8")
+    )
+    routes.push({
+      route: "/ogp-" + page.id,
+      payload: page,
+    })
+  }
+
+  callback(null, routes)
+}
+
+const SITE_TITLE = "kazuma-saitoh"
 
 export default {
-  mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+  mode: "universal",
   head: {
-    title: process.env.npm_package_name || '',
+    title: SITE_TITLE,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "Kazuma Saitoのポートフォリオサイト",
+      },
+      { hid: "og:site_name", property: "og:site_name", content: SITE_TITLE },
+      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "og:title", property: "og:title", content: SITE_TITLE },
+      { hid: "og:url", property: "og:url", content: "https://ka-zu-ma.com/" },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "Kazuma Saitoのポートフォリオサイト",
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  loading: { color: "#fff" },
   css: [
+    { src: "~/node_modules/highlight.js/styles/hopscotch.css", lang: "css" },
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
+  plugins: [{ src: "@/plugins/Lightbox.js" }],
   modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/markdownit",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/style-resources",
+    "@/modules/ogpGenerator",
   ],
-  /*
-  ** Build configuration
-  */
+  styleResources: {
+    scss: [
+      "~/assets/sass/variable/_index.scss",
+      "~/assets/sass/mixin/_index.scss",
+    ],
+  },
+  markdownit: {
+    preset: "default",
+    injected: true,
+    breaks: true,
+    html: true,
+  },
+  generate: {
+    routes: [generateDynamicRoutes, generaterOGP],
+    fallback: true,
+  },
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://ka-zu-ma.com/",
+    exclude: ["/about"],
+    routes: generateDynamicRoutes,
+  },
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  }
+    extend(config, ctx) {},
+  },
 }

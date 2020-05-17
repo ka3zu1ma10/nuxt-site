@@ -14,8 +14,13 @@
             </nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/about">
-              About
+            <nuxt-link to="/blogs">
+              Blogs
+            </nuxt-link>
+          </li>
+          <li class="hd_nav__item">
+            <nuxt-link to="/photos">
+              Photos
             </nuxt-link>
           </li>
         </ul>
@@ -25,14 +30,12 @@
 </template>
 
 <style lang="scss" scoped>
-
 .hd {
-  background-color: #1c4220;
+  background-color: $colour_main_green;
   border-bottom: solid 0.2rem #fff;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
 
   .page_wrap {
     display: flex;
@@ -66,5 +69,4 @@
     }
   }
 }
-
 </style>
