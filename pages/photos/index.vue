@@ -7,7 +7,12 @@
         </li>
       </ul>
     </div>
-    <LightBox ref="lightbox" :media="images" :show-light-box="false" :show-thumbs="false" />
+    <LightBox
+      ref="lightbox"
+      :media="images"
+      :show-light-box="false"
+      :show-thumbs="false"
+    />
   </PageLayout>
 </template>
 <script>

@@ -2,26 +2,18 @@
   <header class="hd">
     <div class="page_wrap">
       <div class="hd_logo">
-        <nuxt-link to="/">
-          Kazuma Saitoh
-        </nuxt-link>
+        <nuxt-link to="/">Kazuma Saitoh</nuxt-link>
       </div>
       <nav>
         <ul class="hd_nav">
           <li class="hd_nav__item">
-            <nuxt-link to="/">
-              Home
-            </nuxt-link>
+            <nuxt-link to="/" active-class="active-nav" exact>Home</nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/blogs">
-              Blogs
-            </nuxt-link>
+            <nuxt-link to="/blogs" active-class="active-nav">Blogs</nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/photos">
-              Photos
-            </nuxt-link>
+            <nuxt-link to="/photos" active-class="active-nav">Photos</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -65,6 +57,16 @@
 
       & a {
         color: #fff;
+        padding: 0.2rem 0.4rem;
+        border: solid 2px $colour_main_green;
+        box-sizing: border-box;
+      }
+      & .active-nav {
+        border: solid 2px;
+        border-top-color: rgba(white, 0.6);
+        border-left-color: rgba(white, 0.6);
+        border-bottom-color: white;
+        border-right-color: white;
       }
     }
   }

@@ -14,6 +14,7 @@ export default {
   components: {
     Header,
     Footer,
+    
   },
 }
 </script>
@@ -62,5 +63,8 @@ a {
   font-size: 1.2em;
   color: $colour_accent_cherry;
   white-space: nowrap;
+}
+body {
+  overflow-y: scroll;
 }
 </style>
