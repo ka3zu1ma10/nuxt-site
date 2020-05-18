@@ -26,12 +26,12 @@ export default {
   data() {
     let imgDate = []
     ImgSummary.forEach((img) => {
-      img['loading'] = '/img/loading.png';
+      img["loading"] = "/img/loading.png"
       imgDate.push(img)
     })
     return {
       images: imgDate,
-      lightboximgs:ImgSummary
+      lightboximgs: ImgSummary,
     }
   },
   methods: {
@@ -55,15 +55,18 @@ export default {
     background-color: white;
     padding: 0.2rem;
     width: 12rem;
+    max-width: 50%;
     box-sizing: border-box;
     height: 8rem;
+    max-height: auto;
     border: solid 0.2rem $colour_main_green;
   }
   &_img {
     display: block;
     margin: 0 auto;
-    width: auto;
+    max-width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 </style>
