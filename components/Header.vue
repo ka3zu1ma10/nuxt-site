@@ -3,7 +3,7 @@
     <div class="page_wrap">
       <div class="hd_logo">
         <nuxt-link to="/">
-          Kazuma Saitoh
+          Kazuma Saito
         </nuxt-link>
       </div>
       <nav>

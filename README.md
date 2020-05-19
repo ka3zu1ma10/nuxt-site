@@ -17,6 +17,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# generate summary json
+npm run mkjson
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

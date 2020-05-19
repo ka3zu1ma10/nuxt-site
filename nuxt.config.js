@@ -32,7 +32,7 @@ const generaterOGP = (callback) => {
   callback(null, routes)
 }
 
-const SITE_TITLE = "kazuma-saitoh"
+const SITE_TITLE = "Kazuma-Saito"
 
 export default {
   mode: "universal",
