@@ -32,7 +32,7 @@ const generaterOGP = (callback) => {
   callback(null, routes)
 }
 
-const SITE_TITLE = "Kazuma-Saito"
+const SITE_TITLE = "Kazuma Saito"
 
 export default {
   mode: "universal",
@@ -44,17 +44,30 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Kazuma Saitoのポートフォリオサイト",
+        content:
+          "Kazuma Saitoのポートフォリオサイトです。私について知りたい方はこちらのサイトをご覧いただけるとうれしいです。",
       },
       { hid: "og:site_name", property: "og:site_name", content: SITE_TITLE },
       { hid: "og:type", property: "og:type", content: "website" },
       { hid: "og:title", property: "og:title", content: SITE_TITLE },
       { hid: "og:url", property: "og:url", content: "https://ka-zu-ma.com/" },
       {
+        hid: "og:img",
+        property: "og:img",
+        content: "https://ka-zu-ma.com/img/ogp.png",
+      },
+      { hid: "og:site_name", property: "og:site_name", content: SITE_TITLE },
+      {
         hid: "og:description",
         property: "og:description",
         content: "Kazuma Saitoのポートフォリオサイト",
       },
+      {
+        hid: "twitter:card",
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      { hid: "twitter:site", property: "twitter:site", content: "@ka3zu1ma10" },
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

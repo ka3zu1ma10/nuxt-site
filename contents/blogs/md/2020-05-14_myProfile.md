@@ -44,3 +44,30 @@ Poca11y(ポカリ)チーム  兼  サイボウズ Office/リモートサービ�
 ### 1人でも多くの人を笑顔にできるUXデザイナーを目指しています。
 まだまだ修行中ですが、一緒に働く人、自分が携わったものに携わる人、もちろん自分が携わったものを使う人達が、少しでも笑顔でいられるようなデザインを考えていきたいと思っています。
 
+
+### 趣味
+- 風景の写真をとることが好きです。よければ[Photos](https://ka-zu-ma.com/photos)もご覧ください。
+- 大学時代に木工をよくやっていたのでDIYも好きです。
+
+### スキル?
+参考になるかわかりませんが、触ったことのある言語やツールを載せておきます。
+
+#### デザインツール
+- Adobe Illustrator
+- Adobe Photoshop
+- Adobe XD
+- Adobe Lightroom
+- Figma
+
+#### 言語
+- HTML
+- css
+- sass
+- JavaScript
+- Vue.js
+- React.js
+- Nuxt.js
+- Gatsby.js
+
+このサイトはNuxt.jsを用いて作成しました。
+中身が気になる方は[Github](https://github.com/ka3zu1ma10/nuxt-site)をご覧ください。
