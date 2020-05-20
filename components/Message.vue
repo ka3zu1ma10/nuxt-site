@@ -125,6 +125,10 @@
     margin-right: 0.4rem;
   }
 
+  .max_name {
+    display: block;
+  }
+
   .max_mes {
     margin-bottom: 2rem;
   }
