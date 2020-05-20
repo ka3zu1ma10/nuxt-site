@@ -11,28 +11,54 @@
           チーム名」の項目は以外は必ずご記入をお願いいたします。
         </p>
       </div>
-      <client-only>
-        <form name="contact" class="contact_form" data-netlify="true">
-          <label class="contact_formLabel">
-            <span class="contact_formText">会社名 or チーム名</span>
-            <span class="contact_formOptional">任意</span>
-            <input class="contact_formControl" type="text" name="team_name" />
-          </label>
-          <label class="contact_formLabel">
-            <span class="contact_formText">お名前 or ニックネーム</span>
-            <input class="contact_formControl" type="text" name="name" required />
-          </label>
-          <label class="contact_formLabel">
-            <span class="contact_formText">メールアドレス</span>
-            <input class="contact_formControl" type="email" name="email" required />
-          </label>
-          <label class="contact_formLabel">
-            <span class="contact_formText">お問い合わせ内容</span>
-            <textarea class="contact_formControl" name="text" cols="30" rows="10" required />
-          </label>
-          <button class="contact_formSubmit" type="submit" name="button" value="内容を送信">内容を送信</button>
-        </form>
-      </client-only>
+      <form
+        name="contact"
+        ref="abc"
+        class="contact_form"
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScb2eVYwUUyjGdLphj9SWDBauJ4VDB9kTt_Rz39Vo0vwKZamg/formResponse"
+      >
+        <label class="contact_formLabel">
+          <span class="contact_formText">会社名 or チーム名</span>
+          <span class="contact_formOptional">任意</span>
+          <input class="contact_formControl" type="text" name="entry.971505657" />
+        </label>
+        <label class="contact_formLabel">
+          <span class="contact_formText">お名前 or ニックネーム</span>
+          <input class="contact_formControl" ref="a" type="text" name="entry.194709951" required />
+        </label>
+        <label class="contact_formLabel">
+          <span class="contact_formText">メールアドレス</span>
+          <span class="contact_formError">※ メールアドレスには必ず「@」が入力されていることを確認してください。</span>
+          <input class="contact_formControl" type="email" name="entry.477356349" required />
+        </label>
+        <label class="contact_formLabel">
+          <span class="contact_formText">お問い合わせ内容</span>
+
+          <textarea
+            class="contact_formControl"
+            name="entry.596333793"
+            cols="30"
+            rows="10"
+            required
+          />
+        </label>
+        <button
+          class="contact_formButton contact_formButton_true"
+          type="button"
+          name="button"
+          value="内容を送信"
+          @click="submit"
+        >
+          <span>内容を送信する</span>
+        </button>
+        <button
+          class="contact_formButton contact_formButton_fails"
+          type="button"
+          name="button"
+          value="内容を送信"
+          disabled
+        >入力項目を確認してください</button>
+      </form>
     </div>
   </PageLayout>
 </template>
@@ -43,13 +69,22 @@ export default {
   components: {
     PageLayout,
   },
+  methods: {
+    submit: function () {
+      let formstat = document.contact.checkValidity()
+      if (formstat) {
+        document.contact.submit()
+        location.href = location.origin + "/contact/thanks"
+      }
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .contact {
   color: white;
-  padding: 2rem;
+  padding: 1.5rem 0;
   &_leadMessage {
     margin-bottom: 1.5rem;
   }
@@ -59,6 +94,7 @@ export default {
     margin: 0.8rem 0;
   }
   &_formControl {
+    box-sizing: border-box;
     display: block;
     width: 100%;
     max-width: 600px;
@@ -81,8 +117,7 @@ export default {
     border-radius: 0.2rem;
     background-color: #e3e3e3;
   }
-  &_formSubmit {
-    display: flex;
+  &_formButton {
     align-items: center;
     background-color: $colour_accent_cherry;
     color: #e3e3e3;
@@ -91,18 +126,43 @@ export default {
     border: none;
     border-radius: 0.2rem;
     transition: 0.8s;
-    &::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-left: 0.5rem solid #e3e3e3;
-      border-top: 0.5rem solid transparent;
-      border-bottom: 0.5rem solid transparent;
-      margin: 0 0 0 0.2rem;
+    &_fails {
+      display: none;
+      color: $colour_main_green;
+      background-color: #e3e3e3;
     }
-    &:focus,
-    &:hover {
-      background-color: rgba($colour_accent_cherry, 0.6);
+    &_true {
+      display: flex;
+      &:focus,
+      &:hover {
+        background-color: rgba($colour_accent_cherry, 0.6);
+      }
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 0.5rem solid #e3e3e3;
+        border-top: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid transparent;
+        margin: 0 0 0 0.2rem;
+      }
+    }
+  }
+  &_formError {
+    display: block;
+    font-size: 80%;
+  }
+}
+.contact_form:invalid {
+  .contact_formButton {
+    &_fails {
+      display: inline;
+    }
+    &_true {
+      display: none;
+      &::after {
+        display: none;
+      }
     }
   }
 }
