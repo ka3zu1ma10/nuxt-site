@@ -11,26 +11,28 @@
           チーム名」の項目は以外は必ずご記入をお願いいたします。
         </p>
       </div>
-      <form name="contact" class="contact_form" data-netlify="true">
-        <label class="contact_formLabel">
-          <span class="contact_formText">会社名 or チーム名</span>
-          <span class="contact_formOptional">任意</span>
-          <input class="contact_formControl" type="text" name="team_name" />
-        </label>
-        <label class="contact_formLabel">
-          <span class="contact_formText">お名前 or ニックネーム</span>
-          <input class="contact_formControl" type="text" name="name" required />
-        </label>
-        <label class="contact_formLabel">
-          <span class="contact_formText">メールアドレス</span>
-          <input class="contact_formControl" type="email" name="email" required />
-        </label>
-        <label class="contact_formLabel">
-          <span class="contact_formText">お問い合わせ内容</span>
-          <textarea class="contact_formControl" name="text" cols="30" rows="10" required />
-        </label>
-        <button class="contact_formSubmit" type="submit" name="button" value="内容を送信">内容を送信</button>
-      </form>
+      <client-only>
+        <form name="contact" class="contact_form" data-netlify="true">
+          <label class="contact_formLabel">
+            <span class="contact_formText">会社名 or チーム名</span>
+            <span class="contact_formOptional">任意</span>
+            <input class="contact_formControl" type="text" name="team_name" />
+          </label>
+          <label class="contact_formLabel">
+            <span class="contact_formText">お名前 or ニックネーム</span>
+            <input class="contact_formControl" type="text" name="name" required />
+          </label>
+          <label class="contact_formLabel">
+            <span class="contact_formText">メールアドレス</span>
+            <input class="contact_formControl" type="email" name="email" required />
+          </label>
+          <label class="contact_formLabel">
+            <span class="contact_formText">お問い合わせ内容</span>
+            <textarea class="contact_formControl" name="text" cols="30" rows="10" required />
+          </label>
+          <button class="contact_formSubmit" type="submit" name="button" value="内容を送信">内容を送信</button>
+        </form>
+      </client-only>
     </div>
   </PageLayout>
 </template>
