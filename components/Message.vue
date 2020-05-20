@@ -1,15 +1,24 @@
 <template>
   <div class="page_wrap">
-    <img class="max_img" src="~/assets/img/kazuma.png" alt="写真：kazuma saitoの全力の笑顔" />
+    <img
+      class="max_img"
+      src="~/assets/img/kazuma.png"
+      alt="写真：kazuma saitoの全力の笑顔"
+    />
     <article class="max_message">
       <h2 class="max_name">
-        <img class="max_icon" src="@/assets/img/kazuma-icon.png" alt="写真：kazuma saitoの全力の笑顔" />
+        <img
+          class="max_icon"
+          src="@/assets/img/kazuma-icon.png"
+          alt="写真：kazuma saitoの全力の笑顔"
+        />
         <div class="max_name-text">
           <div class="max_name-eg">
-            <span class="cherry">K</span>azuma
-            <span class="cherry">S</span>aito
+            <span class="cherry">K</span>azuma <span class="cherry">S</span>aito
           </div>
-          <div class="max_name-jp" aria-label="日本語表記">西藤 和馬</div>
+          <div class="max_name-jp" aria-label="日本語表記">
+            西藤 和馬
+          </div>
         </div>
       </h2>
       <section class="max_mes">
