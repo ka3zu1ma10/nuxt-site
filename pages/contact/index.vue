@@ -12,24 +12,39 @@
         </p>
       </div>
       <form
-        name="contact"
         ref="abc"
+        name="contact"
         class="contact_form"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScb2eVYwUUyjGdLphj9SWDBauJ4VDB9kTt_Rz39Vo0vwKZamg/formResponse"
       >
         <label class="contact_formLabel">
           <span class="contact_formText">会社名 or チーム名</span>
           <span class="contact_formOptional">任意</span>
-          <input class="contact_formControl" type="text" name="entry.971505657" />
+          <input
+            class="contact_formControl"
+            type="text"
+            name="entry.971505657"
+          />
         </label>
         <label class="contact_formLabel">
           <span class="contact_formText">お名前 or ニックネーム</span>
-          <input class="contact_formControl" ref="a" type="text" name="entry.194709951" required />
+          <input
+            ref="a"
+            class="contact_formControl"
+            type="text"
+            name="entry.194709951"
+            required
+          />
         </label>
         <label class="contact_formLabel">
           <span class="contact_formText">メールアドレス</span>
-          <span class="contact_formError">※ メールアドレスには必ず「@」が入力されていることを確認してください。</span>
-          <input class="contact_formControl" type="email" name="entry.477356349" required />
+
+          <input
+            class="contact_formControl"
+            type="email"
+            name="entry.477356349"
+            required
+          />
         </label>
         <label class="contact_formLabel">
           <span class="contact_formText">お問い合わせ内容</span>
@@ -57,7 +72,9 @@
           name="button"
           value="内容を送信"
           disabled
-        >入力項目を確認してください</button>
+        >
+          入力項目を確認してください
+        </button>
       </form>
     </div>
   </PageLayout>
