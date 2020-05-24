@@ -77,7 +77,10 @@ export default {
   css: [
     { src: "~/node_modules/highlight.js/styles/hopscotch.css", lang: "css" },
   ],
-  plugins: [{ src: "@/plugins/Lightbox.js" }],
+  plugins: [
+    { src: "@/plugins/Lightbox.js" },
+    { src: "@/plugins/routerOptions.js", ssr: false },
+  ],
   modules: [
     "@nuxtjs/axios",
     "@nuxtjs/pwa",

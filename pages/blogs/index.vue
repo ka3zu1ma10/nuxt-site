@@ -1,7 +1,7 @@
 <template>
   <PageLayout title="Blogs">
     <ul class="blog_list">
-      <li v-for="param in blogDates" :key="param" class="blog_item">
+      <li v-for="param in blogDates" :key="param.id" class="blog_item">
         <div class="blog_item-wraper">
           <nuxt-link class="blog_title" :to="param.url">
             {{ param.title }}
