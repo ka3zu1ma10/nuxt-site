@@ -2,7 +2,7 @@
   <PageLayout title="Photos">
     <div class="photos">
       <ul class="photo_list">
-        <li v-for="(img, index) in images" :key="img" class="photo_listItem">
+        <li v-for="(img, index) in images" :key="img.src" class="photo_listItem">
           <img v-lazy="img" class="photo_img" alt @click="openGallery(index)" />
         </li>
       </ul>
