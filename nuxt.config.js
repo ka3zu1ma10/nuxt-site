@@ -115,8 +115,11 @@ export default {
     extend(config, ctx) {},
   },
   buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-167574769-1'
-    }]
-  ]
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-167574769-1",
+      },
+    ],
+  ],
 }

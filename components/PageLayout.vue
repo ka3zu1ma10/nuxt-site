@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <div class="page_wrap">
-      <h2 class="title">
+      <h2 v-if="title !== ''" class="title">
         {{ title }}
       </h2>
       <slot />

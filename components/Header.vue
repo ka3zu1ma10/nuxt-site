@@ -31,11 +31,11 @@
               Photos
             </nuxt-link>
           </li>
-          <li class="hd_nav__item">
+          <!-- <li class="hd_nav__item">
             <nuxt-link to="/contact" active-class="active-nav">
               Contact
             </nuxt-link>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>
