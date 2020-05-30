@@ -14,17 +14,16 @@
       <form
         ref="abc"
         name="contact"
+        method="post"
         class="contact_form"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScb2eVYwUUyjGdLphj9SWDBauJ4VDB9kTt_Rz39Vo0vwKZamg/formResponse"
+        action="/contact/thanks"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <label class="contact_formLabel">
           <span class="contact_formText">会社名 or チーム名</span>
           <span class="contact_formOptional">任意</span>
-          <input
-            class="contact_formControl"
-            type="text"
-            name="entry.971505657"
-          />
+          <input class="contact_formControl" type="text" name="team" />
         </label>
         <label class="contact_formLabel">
           <span class="contact_formText">お名前 or ニックネーム</span>
@@ -32,7 +31,7 @@
             ref="a"
             class="contact_formControl"
             type="text"
-            name="entry.194709951"
+            name="name"
             required
           />
         </label>
@@ -42,7 +41,7 @@
           <input
             class="contact_formControl"
             type="email"
-            name="entry.477356349"
+            name="mail"
             required
           />
         </label>
@@ -51,7 +50,7 @@
 
           <textarea
             class="contact_formControl"
-            name="entry.596333793"
+            name="message"
             cols="30"
             rows="10"
             required
@@ -59,10 +58,9 @@
         </label>
         <button
           class="contact_formButton contact_formButton_true"
-          type="button"
+          type="submit"
           name="button"
           value="内容を送信"
-          @click="submit"
         >
           <span>内容を送信する</span>
         </button>
@@ -85,15 +83,6 @@ import PageLayout from "@/components/PageLayout"
 export default {
   components: {
     PageLayout,
-  },
-  methods: {
-    submit: function () {
-      let formstat = document.contact.checkValidity()
-      if (formstat) {
-        document.contact.submit()
-        location.href = location.origin + "/contact/thanks"
-      }
-    },
   },
 }
 </script>
