@@ -28,17 +28,34 @@
           </label>
           <label class="contact_formLabel">
             <span class="contact_formText">お名前 or ニックネーム</span>
-            <input ref="a" class="contact_formControl" type="text" name="name" required />
+            <input
+              ref="a"
+              class="contact_formControl"
+              type="text"
+              name="name"
+              required
+            />
           </label>
           <label class="contact_formLabel">
             <span class="contact_formText">メールアドレス</span>
 
-            <input class="contact_formControl" type="email" name="mail" required />
+            <input
+              class="contact_formControl"
+              type="email"
+              name="mail"
+              required
+            />
           </label>
           <label class="contact_formLabel">
             <span class="contact_formText">お問い合わせ内容</span>
 
-            <textarea class="contact_formControl" name="message" cols="30" rows="10" required />
+            <textarea
+              class="contact_formControl"
+              name="message"
+              cols="30"
+              rows="10"
+              required
+            />
           </label>
           <button
             class="contact_formButton contact_formButton_true"
@@ -54,7 +71,9 @@
             name="button"
             value="内容を送信"
             disabled
-          >入力項目を確認してください</button>
+          >
+            入力項目を確認してください
+          </button>
         </form>
       </client-only>
     </div>
