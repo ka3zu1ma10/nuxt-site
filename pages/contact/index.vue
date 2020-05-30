@@ -18,8 +18,9 @@
           method="post"
           class="contact_form"
           action="/contact/thanks"
-          data-netlify="true"
+          netlify
         >
+          <input type="hidden" name="form-name" value="contact" />
           <label class="contact_formLabel">
             <span class="contact_formText">会社名 or チーム名</span>
             <span class="contact_formOptional">任意</span>
