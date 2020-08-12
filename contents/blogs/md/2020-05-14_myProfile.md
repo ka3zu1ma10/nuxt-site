@@ -59,7 +59,7 @@ Poca11y(ポカリ)チーム  兼  サイボウズ Office/リモートサービ�
 - Adobe Lightroom
 - Figma
 
-#### 言語
+#### 言語など
 - HTML
 - css
 - sass
