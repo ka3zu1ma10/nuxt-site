@@ -16,9 +16,7 @@
           <div class="max_name-eg">
             <span class="cherry">K</span>azuma <span class="cherry">S</span>aito
           </div>
-          <div class="max_name-jp" aria-label="日本語表記">
-            西藤 和馬
-          </div>
+          <div class="max_name-jp" aria-label="日本語表記">西藤 和馬</div>
         </div>
       </h2>
       <section class="max_mes">
