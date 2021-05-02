@@ -16,7 +16,7 @@
             <nuxt-link to="/" active-class="active-nav" exact> Home </nuxt-link>
           </li>
           <li class="hd_nav__item">
-            <nuxt-link to="/blogs" active-class="active-nav"> Blogs </nuxt-link>
+            <nuxt-link to="/note" active-class="active-nav"> Note </nuxt-link>
           </li>
           <li class="hd_nav__item">
             <nuxt-link to="/photos" active-class="active-nav">

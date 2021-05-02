@@ -27,6 +27,7 @@
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/sitemap": "^1.2.0",
     "@nuxtjs/style-resources": "^0.1.2",
+    "axios": "^0.21.1",
     "fs": "0.0.1-security",
     "glob": "^7.1.4",
     "googleapis": "^66.0.0",
