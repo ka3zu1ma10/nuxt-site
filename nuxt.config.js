@@ -1,36 +1,36 @@
-const { sourceFileArray } = require("./contents/blogs/summary.json")
+// const { sourceFileArray } = require("./contents/blogs/summary.json")
 
-const sourceFileNameToUrl = (filepath) => {
-  const deleteExt = filepath.replace(".md", "")
-  const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1]
-  const splitArray = fileName.split("_")
-  return `/blogs/${splitArray[0]}/${splitArray[1]}`
-}
+// const sourceFileNameToUrl = (filepath) => {
+//   const deleteExt = filepath.replace(".md", "")
+//   const fileName = deleteExt.split("/")[deleteExt.split("/").length - 1]
+//   const splitArray = fileName.split("_")
+//   return `/blogs/${splitArray[0]}/${splitArray[1]}`
+// }
 
-const generateDynamicRoutes = (callback) => {
-  const routes = sourceFileArray.map((sourceFileName) => {
-    return sourceFileNameToUrl(sourceFileName)
-  })
-  /* eslint no-unused-vars: 0 */
-  callback(null, routes)
-}
+// const generateDynamicRoutes = (callback) => {
+//   const routes = sourceFileArray.map((sourceFileName) => {
+//     return sourceFileNameToUrl(sourceFileName)
+//   })
+//   /* eslint no-unused-vars: 0 */
+//   callback(null, routes)
+// }
 
-const generaterOGP = (callback) => {
-  const routes = []
-  const fs = require("fs")
-  const fileNames = fs.readdirSync("./contents/blogs/json/")
-  for (const key in fileNames) {
-    const page = JSON.parse(
-      fs.readFileSync("./contents/blogs/json/" + fileNames[key], "utf8")
-    )
-    routes.push({
-      route: "/ogp-" + page.id,
-      payload: page,
-    })
-  }
+// const generaterOGP = (callback) => {
+//   const routes = []
+//   const fs = require("fs")
+//   const fileNames = fs.readdirSync("./contents/blogs/json/")
+//   for (const key in fileNames) {
+//     const page = JSON.parse(
+//       fs.readFileSync("./contents/blogs/json/" + fileNames[key], "utf8")
+//     )
+//     routes.push({
+//       route: "/ogp-" + page.id,
+//       payload: page,
+//     })
+//   }
 
-  callback(null, routes)
-}
+//   callback(null, routes)
+// }
 
 const SITE_TITLE = "Kazuma Saito"
 
@@ -101,18 +101,18 @@ export default {
     breaks: true,
     html: true,
   },
-  generate: {
-    routes: [generateDynamicRoutes, generaterOGP],
-    fallback: true,
-  },
-  sitemap: {
-    path: "/sitemap.xml",
-    hostname: "https://ka-zu-ma.com/",
-    exclude: ["/about"],
-    routes: generateDynamicRoutes,
-  },
+  // generate: {
+  //   routes: [generateDynamicRoutes, generaterOGP],
+  //   fallback: true,
+  // },
+  // sitemap: {
+  //   path: "/sitemap.xml",
+  //   hostname: "https://ka-zu-ma.com/",
+  //   exclude: ["/about"],
+  //   routes: generateDynamicRoutes,
+  // },
   build: {
-    extend(config, ctx) {},
+    // extend(config, ctx) {},
   },
   buildModules: [
     [

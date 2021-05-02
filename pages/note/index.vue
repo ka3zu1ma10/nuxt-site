@@ -7,8 +7,12 @@
             {{ content.title }}
           </nuxt-link>
           <div class="note_date">
-          <!-- <TagList class="blog_tags" :tags="param.tags" /> -->
-            <div>{{ new Date(content.date).getFullYear()  }}/{{ new Date(content.date).getMonth() }}/{{new Date(content.date).getDate()}}</div>
+            <!-- <TagList class="blog_tags" :tags="param.tags" /> -->
+            <div>
+              {{ new Date(content.date).getFullYear() }}/{{
+                new Date(content.date).getMonth()
+              }}/{{ new Date(content.date).getDate() }}
+            </div>
           </div>
         </div>
       </li>
