@@ -10,14 +10,12 @@
     "start": "nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "md": "processmd contents/blogs/md/**/*.md --stdout --outputDir contents/blogs/json > contents/blogs/summary.json",
     "jpg_copy": "node modules/copyPhotoDate.js ",
     "jpg_summary": "node modules/photSummaryGenerator.js ",
     "jpg": "run-s jpg_copy jpg_summary",
-    "mkjson": "run-s md jpg_summary",
     "generate": "nuxt generate",
-    "deploy": "run-s md jpg_summary lintfix generate",
-    "pub": "run-s md jpg_summary lintfix generate build"
+    "deploy": "run-s jpg_summary lintfix generate",
+    "pub": "run-s jpg_summary lintfix generate build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
