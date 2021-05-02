@@ -96,7 +96,7 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .blog {
+  .note {
     &_list {
       padding: 1rem 0;
     }

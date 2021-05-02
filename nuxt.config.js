@@ -87,7 +87,7 @@ export default {
     "@nuxtjs/markdownit",
     "@nuxtjs/sitemap",
     "@nuxtjs/style-resources",
-    "@/modules/ogpGenerator",
+    // "@/modules/ogpGenerator",
   ],
   styleResources: {
     scss: [
