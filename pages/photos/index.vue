@@ -3,17 +3,17 @@
     <div class="photos">
       <ul class="photo_list">
         <li
-          v-for="(img, index) in images"
-          :key="img.src"
+          v-for="(item, index) in items"
+          :key="item.src"
           class="photo_listItem"
         >
-          <img v-lazy="img" class="photo_img" alt @click="openGallery(index)" />
+          <img v-lazy="item" class="photo_img" alt @click="openGallery(index)" />
         </li>
       </ul>
     </div>
     <LightBox
       ref="lightbox"
-      :media="images"
+      :media="items"
       :show-light-box="false"
       :show-thumbs="false"
     />
@@ -22,8 +22,7 @@
 <script>
 import PageLayout from "@/components/PageLayout"
 import LightBox from "vue-image-lightbox"
-
-import ImgSummary from "@/contents/photos/photo.json"
+import axios from "axios"
 
 require("vue-image-lightbox/dist/vue-image-lightbox.min.css")
 
@@ -33,19 +32,30 @@ export default {
     LightBox,
   },
   data() {
-    let imgDate = []
-    ImgSummary.forEach((img) => {
-      img["loading"] = "/img/loading.png"
-      imgDate.push(img)
-    })
     return {
-      images: imgDate,
-      lightboximgs: ImgSummary,
+      items: "",
     }
   },
+  mounted() {
+    this.asyncData()
+  },
   methods: {
-    openGallery(index) {
-      this.$refs.lightbox.showImage(index)
+    asyncData() {
+      axios
+        .get(
+          `https://max-portfolio.microcms.io/api/v1/pf-photo`,
+          {
+            headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
+          }
+        )
+        .then((res) => {
+          this.items = res.data.contents.map((val) =>{
+            return {
+              "src": val.data.url,
+              "loading": "/img/loading.png"
+            }
+          })
+        })
     },
   },
 }
