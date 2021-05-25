@@ -7,7 +7,9 @@
         </h2>
         <div class="blog_date">
           <!-- <TagList class="blog_tags back-wite" :tags="formatTags" /> -->
-          <time>{{ items.date }}</time>
+          <time> {{ new Date(items.date).getFullYear() }}/{{
+                new Date(items.date).getMonth()
+              }}/{{ new Date(items.date).getDate() }}</time>
         </div>
       </header>
       <section class="blog_body" v-html="items.note" />
