@@ -10,12 +10,9 @@
     "start": "nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "jpg_copy": "node modules/copyPhotoDate.js ",
-    "jpg_summary": "node modules/photSummaryGenerator.js ",
-    "jpg": "run-s jpg_copy jpg_summary",
     "generate": "nuxt generate",
-    "deploy": "run-s jpg_summary lintfix generate",
-    "pub": "run-s jpg_summary lintfix generate build"
+    "deploy": "run-s lintfix generate",
+    "pub": "run-s lintfix generate build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
