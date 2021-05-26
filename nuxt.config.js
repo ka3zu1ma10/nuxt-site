@@ -67,8 +67,7 @@ export default {
     breaks: true,
     html: true,
   },
-  build: {
-  },
+  build: {},
   buildModules: [
     [
       "@nuxtjs/google-analytics",

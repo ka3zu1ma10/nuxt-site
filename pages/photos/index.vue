@@ -7,7 +7,12 @@
           :key="item.src"
           class="photo_listItem"
         >
-          <img v-lazy="item" class="photo_img" alt @click="openGallery(index)" />
+          <img
+            v-lazy="item"
+            class="photo_img"
+            alt
+            @click="openGallery(index)"
+          />
         </li>
       </ul>
     </div>
@@ -42,17 +47,14 @@ export default {
   methods: {
     asyncData() {
       axios
-        .get(
-          `https://max-portfolio.microcms.io/api/v1/pf-photo`,
-          {
-            headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
-          }
-        )
+        .get("https://max-portfolio.microcms.io/api/v1/pf-photo", {
+          headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
+        })
         .then((res) => {
-          this.items = res.data.contents.map((val) =>{
+          this.items = res.data.contents.map((val) => {
             return {
-              "src": val.data.url,
-              "loading": "/img/loading.png"
+              src: val.data.url,
+              loading: "/img/loading.png",
             }
           })
         })

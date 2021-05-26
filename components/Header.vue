@@ -5,15 +5,12 @@
         <nuxt-link to="/"> Kazuma Saito </nuxt-link>
         <button class="btn-hamburger" @click="naviOpen">
           <p class="visually-hidden">メニューを開く</p>
-          <span />
-          <span />
-          <span />
         </button>
       </div>
       <nav>
         <ul class="hd_nav">
           <li class="hd_nav__item">
-            <nuxt-link to="/" active-class="active-nav" exact> Home </nuxt-link>
+            <nuxt-link to="/" active-class="active-nav" exact> Hom </nuxt-link>
           </li>
           <li class="hd_nav__item">
             <nuxt-link to="/note" active-class="active-nav"> Note </nuxt-link>

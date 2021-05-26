@@ -46,14 +46,17 @@ export default {
         })
     },
   },
-    head() {
-      const ogp = 'https://images.microcms-assets.io/assets/b4d6cd6e11634510b57f74a9041b1700/a0529c5ce555411da2b7511c1bc66500/default.png?txt='+this.items.title+'&txt-size=62&txt-color=fff&txt-align=middle,center&txt-fit=max'
-    return { 
-      title: this.items.title ,
+  head() {
+    const ogp =
+      "https://images.microcms-assets.io/assets/b4d6cd6e11634510b57f74a9041b1700/a0529c5ce555411da2b7511c1bc66500/default.png?txt=" +
+      this.items.title +
+      "&txt-size=62&txt-color=fff&txt-align=middle,center&txt-fit=max"
+    return {
+      title: this.items.title,
       meta: [
-        { hid: 'og:type', property: 'og:type', content: 'article' },
-        { hid: 'og:title', property: 'og:title', content: this.items.title },
-        { hid: 'og:url', property: 'og:url', content: ogp},
+        { hid: "og:type", property: "og:type", content: "article" },
+        { hid: "og:title", property: "og:title", content: this.items.title },
+        { hid: "og:url", property: "og:url", content: ogp },
       ],
     }
   },
