@@ -59,6 +59,9 @@ export default {
           })
         })
     },
+    openGallery(index) {
+      this.$refs.lightbox.showImage(index)
+    },
   },
 }
 </script>
