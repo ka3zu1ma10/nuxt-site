@@ -1,6 +1,6 @@
 <template>
   <PageLayout title="Photos">
-    <div class="photos">
+    <div class="photo">
       <ul class="photo_list">
         <li
           v-for="(item, index) in items"
@@ -68,27 +68,25 @@ export default {
 
 <style lang="scss" scoped>
 .photo {
+  padding-top: 3rem;
   &_list {
     list-style: none;
-    display: flex;
-    flex-flow: wrap;
-    margin: 0 auto;
-    justify-content: center;
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   &_listItem {
-    background-color: white;
-    padding: 0.2rem;
-    width: 12rem;
-    max-width: 50%;
-    box-sizing: border-box;
-    height: 8rem;
-    max-height: auto;
-    border: solid 0.2rem $colour_main_green;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    cursor: pointer;
   }
   &_img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    position: absolute;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
