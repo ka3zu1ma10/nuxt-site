@@ -46,18 +46,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .service_contents {
-  &-heading{
-  color: white;
-  text-align: center;
-  font-size: 3rem;
-  &::after {
-    margin-top: 0.5rem;
-    background-color: white;
-    border-radius: 0.25rem;
-    content: "";
-    display: block;
-    height: 0.5rem;
-  }
+  &-heading {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    &::after {
+      margin-top: 0.5rem;
+      background-color: white;
+      border-radius: 0.25rem;
+      content: "";
+      display: block;
+      height: 0.5rem;
+    }
   }
   &-item {
     .service_contents-item-inner {

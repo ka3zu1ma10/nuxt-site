@@ -25,7 +25,7 @@ module.exports = {
     "vue/singleline-html-element-content-newline": [
       "error",
       {
-        ignores: ["nuxt-link", "div", "p"],
+        ignores: ["nuxt-link", "div", "p", "h2"],
       },
     ],
     "vue/no-v-html": "off",

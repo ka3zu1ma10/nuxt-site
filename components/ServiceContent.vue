@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "serviceContent",
+  name: "ServiceContent",
   props: {
     title: { type: String, required: true },
     dom: { type: String, required: true },
