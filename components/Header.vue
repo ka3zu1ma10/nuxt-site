@@ -4,6 +4,9 @@
       <div class="hd_logo">
         <nuxt-link to="/"> Kazuma Saito </nuxt-link>
         <button class="btn-hamburger" @click="naviOpen">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
           <p class="visually-hidden">メニューを開く</p>
         </button>
       </div>
