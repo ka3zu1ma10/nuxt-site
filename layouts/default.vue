@@ -33,7 +33,7 @@ export default {
   .page {
     &_wrap {
       width: 100%;
-      max-width: 56rem;
+      max-width: 80rem;
       margin: 0 auto;
       box-sizing: border-box;
       padding: 0.8rem 1rem;

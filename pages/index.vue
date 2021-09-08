@@ -5,7 +5,7 @@
     </article>
     <div class="section section_back-green">
       <div class="page_wrap">
-        <article class="prof">
+        <!-- <article class="prof">
           <h2>Kazuma's Data</h2>
           <section>
             <h3>所属</h3>
@@ -15,7 +15,8 @@
               Office/リモートサービスチーム
             </p>
           </section>
-        </article>
+        </article> -->
+        <ServiceContentList />
       </div>
     </div>
   </main>
@@ -23,10 +24,12 @@
 
 <script>
 import Message from "@/components/Message.vue"
+import ServiceContentList from "@/components/ServiceContentList.vue"
 
 export default {
   components: {
     Message,
+    ServiceContentList,
   },
 }
 </script>

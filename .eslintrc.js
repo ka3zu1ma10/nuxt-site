@@ -22,5 +22,12 @@ module.exports = {
     "no-unused-vars": "off",
     "prettier/prettier": ["error", { semi: false }],
     "vue/html-self-closing": "off",
+    "vue/singleline-html-element-content-newline": [
+      "error",
+      {
+        ignores: ["nuxt-link", "div", "p", "h2"],
+      },
+    ],
+    "vue/no-v-html": "off",
   },
 }
