@@ -30,14 +30,15 @@ export default {
 .title {
   color: white;
   text-align: center;
-  font-size: 2rem;
-  padding-bottom: 0.2rem;
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
   &::after {
+    margin-top: 0.5rem;
     background-color: white;
-    border-radius: 0.2rem;
+    border-radius: 0.25rem;
     content: "";
     display: block;
-    height: 0.4rem;
+    height: 0.5rem;
   }
 }
 </style>

@@ -16,7 +16,7 @@
             </p>
           </section>
         </article> -->
-        <PrfContentList />
+        <ServiceContentList />
       </div>
     </div>
   </main>
@@ -24,12 +24,12 @@
 
 <script>
 import Message from "@/components/Message.vue"
-import PrfContentList from "@/components/PrfContentList.vue"
+import ServiceContentList from "@/components/ServiceContentList.vue"
 
 export default {
   components: {
     Message,
-    PrfContentList,
+    ServiceContentList,
   },
 }
 </script>

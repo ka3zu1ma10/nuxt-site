@@ -1,25 +1,26 @@
 <template>
-  <div class="prf_contents">
+  <section class="service_contents">
+    <h2 class="service_contents-heading">My Service</h2>
     <section
       v-for="content in contents"
       :key="content.id"
-      class="prf_contents-item"
+      class="service_contents-item"
     >
-      <PrfContent
+      <ServiceContent
         :title="content.title"
         :dom="content.content"
         :img="content.img.url"
-        class="prf_contents-item-inner"
+        class="service_contents-item-inner"
       />
     </section>
-  </div>
+  </section>
 </template>
 <script>
 import axios from "axios"
-import PrfContent from "./PrfContent.vue"
+import ServiceContent from "./ServiceContent.vue"
 
 export default {
-  components: { PrfContent },
+  components: { ServiceContent },
   data() {
     return {
       contents: [],
@@ -31,7 +32,7 @@ export default {
   methods: {
     asyncData() {
       axios
-        .get("https://max-portfolio.microcms.io/api/v1/pf-prof_contents", {
+        .get("https://max-portfolio.microcms.io/api/v1/pf-service_contents", {
           headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
         })
         .then((res) => {
@@ -44,16 +45,29 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.prf_contents {
+.service_contents {
+  &-heading{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  &::after {
+    margin-top: 0.5rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    content: "";
+    display: block;
+    height: 0.5rem;
+  }
+  }
   &-item {
-    .prf_contents-item-inner {
+    .service_contents-item-inner {
       display: flex;
       @media (max-width: 600px) {
         flex-flow: column-reverse;
       }
     }
     &:nth-of-type(even) {
-      .prf_contents-item-inner {
+      .service_contents-item-inner {
         flex-flow: row-reverse;
         @media (max-width: 600px) {
           flex-flow: column-reverse;

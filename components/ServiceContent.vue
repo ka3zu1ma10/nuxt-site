@@ -1,5 +1,5 @@
 <template>
-  <section class="prf">
+  <section class="service">
     <div class="content">
       <h3 class="title">
         {{ title }}
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "PrfContent",
+  name: "serviceContent",
   props: {
     title: { type: String, required: true },
     dom: { type: String, required: true },
@@ -24,18 +24,22 @@ export default {
 </script>
 
 <style lang="scss">
-.prf {
+.service {
   padding: 2rem 0;
   font-size: 1.2rem;
   .content {
-    flex: 1;
+    flex: 3;
     margin: auto 1rem;
     ul {
       padding-left: 1rem;
     }
+    strong {
+      font-size: 1.2em;
+      color: #ff4b61;
+    }
   }
   .img-wrap {
-    flex: 1;
+    flex: 2;
     // padding: 1rem;
     padding: 1.5rem;
     .img {
@@ -43,7 +47,7 @@ export default {
       width: 100%;
       height: auto;
       object-fit: cover;
-      box-shadow: -1rem 1rem rgba(#fff, 0.5);
+      box-shadow: 1rem 1rem rgba(#000, 0.5);
     }
   }
 }
