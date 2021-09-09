@@ -14,7 +14,7 @@
           </time>
         </div>
       </header>
-      <section class="blog_body" v-html="items.note" />
+      <section class="blog_body" v-html="items.blog" />
     </article>
   </main>
 </template>
@@ -50,7 +50,7 @@ export default {
     const ogp =
       "https://images.microcms-assets.io/assets/b4d6cd6e11634510b57f74a9041b1700/a0529c5ce555411da2b7511c1bc66500/default.png?txt=" +
       this.items.title +
-      "&txt-size=62&txt-color=fff&txt-align=middle,center&txt-fit=max"
+      "&txt-size=62&txt-color=00182E&txt-align=middle,center&txt-fit=max"
     return {
       title: this.items.title,
       meta: [
