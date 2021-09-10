@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer_wrap page_wrap">
-      <div class="footer_area" />
+      <!-- <div class="footer_area" /> -->
       <ul class="snsLink">
         <li>
           <a href="https://twitter.com/ka3zu1ma10">
