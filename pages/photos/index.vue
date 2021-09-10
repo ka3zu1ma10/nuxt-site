@@ -68,7 +68,6 @@ export default {
 
 <style lang="scss" scoped>
 .photo {
-  padding-top: 3rem;
   &_list {
     list-style: none;
     display: grid;
@@ -89,6 +88,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include shadow-active;
   }
 }
 </style>

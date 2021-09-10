@@ -99,7 +99,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@include media-mobile() {
   .max_message {
     font-size: 0.8rem;
     bottom: 0;
@@ -116,7 +116,7 @@
   .max_icon {
     border-radius: 50%;
     border: solid 0.2rem $colour_main_green;
-    background-color: $colour_main_green;
+    background-color: $colour_back_green;
     display: block;
 
     width: 4rem;

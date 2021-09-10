@@ -1,5 +1,5 @@
 <template>
-  <PageLayout title="blog">
+  <PageLayout title="Blog">
     <ul class="blog_list">
       <li v-for="content in contents" :key="content.id" class="blog_item">
         <div class="blog_item-wraper">
@@ -59,7 +59,7 @@ export default {
 .blog {
   &_list {
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 0;
     border-radius: 0.2rem;
   }
   &_item {
@@ -67,7 +67,7 @@ export default {
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.2rem;
-    box-shadow: 0.2rem 0.2rem 0.2rem rgba($color: #000000, $alpha: 0.2);
+    @include shadow-active;
     &-wraper {
       position: relative;
       box-sizing: border-box;

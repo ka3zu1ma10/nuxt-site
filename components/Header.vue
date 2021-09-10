@@ -46,8 +46,8 @@ export default {
 
 <style lang="scss" scoped>
 .hd {
-  background-color: $colour_main_green;
-  border-bottom: solid 0.2rem #fff;
+  background-color: $colour_back_green;
+  @include shadow;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -61,10 +61,11 @@ export default {
   }
 
   &_logo {
+    font-weight: bold;
     display: flex;
     a {
       flex: 1;
-      color: #fff;
+      color: $colour_main_green;
       text-decoration: none;
       white-space: nowrap;
       margin-right: 1rem;
@@ -83,18 +84,19 @@ export default {
       }
 
       & a {
-        color: #fff;
+        color: $colour_main_green;
         padding: 0.2rem 0.4rem;
-        border-bottom: solid 2px $colour_main_green;
+        border-bottom: solid 2px transparent;
+        font-weight: bold;
         box-sizing: border-box;
         &:focus,
         &:hover {
           text-decoration: none;
-          border-bottom: solid 2px white;
+          border-bottom: solid 2px $colour_main_green;
         }
       }
       & .active-nav {
-        border-bottom: solid 2px white;
+        border-bottom: solid 2px $colour_main_green;
       }
     }
   }
@@ -138,7 +140,7 @@ export default {
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: #fff;
+        background-color: $colour_main_green;
         border-radius: 4px;
         display: inline-block;
         transition: all 0.5s;

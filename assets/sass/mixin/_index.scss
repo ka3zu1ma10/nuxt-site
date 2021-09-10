@@ -1,3 +1,23 @@
 @mixin media-mobile {
   @media screen and (max-width: 600px) { @content; }
 }
+
+@mixin shadow {
+  box-shadow: 0.2rem 0.2rem .5rem .2rem rgba($color: $colour_main_green, $alpha: 0.2);
+}
+
+@mixin shadow-active {
+  @include shadow ;
+  &:hover,&:focus{
+    box-shadow: 0.2rem 0.2rem .5rem .2rem rgba($color: $colour_main_green, $alpha: 0.5);
+    transform: scale(1.01);
+  }
+}
+
+@mixin head_line {
+  color: $colour_main_green;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem 1rem;
+  margin: 3vw 0;
+  font-weight: normal;
+}

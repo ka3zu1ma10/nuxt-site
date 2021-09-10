@@ -45,7 +45,7 @@
 </template>
 <style lang="scss" scoped>
 .footer {
-  background-color: $colour_main_green;
+  // background-color: $colour_back_green;
   &_wrap {
     box-sizing: border-box;
     padding: 0.8rem 1rem;
@@ -64,14 +64,11 @@
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    padding: 0.2rem;
+    padding: 0.1rem;
     background-color: #fff;
+    border: .2rem solid $colour_main_green;
     margin: 0 0.5rem;
-    &:focus,
-    &:hover {
-      box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.8);
-      transform: scale(1.05) translate(-5%, -5%);
-    }
+    @include shadow-active;
   }
 }
 .instagram {

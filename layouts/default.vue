@@ -36,7 +36,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-flow: column;
-  background-color: $colour_main_green;
+  background-color: $colour_back_green;
   .page {
     &_wrap {
       width: 100%;
