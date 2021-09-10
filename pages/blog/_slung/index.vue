@@ -42,7 +42,6 @@ export default {
         )
         .then((res) => {
           this.items = res.data
-          console.log(res.data)
         })
     },
   },
@@ -66,7 +65,7 @@ export default {
 <style lang="scss" scoped>
 .blog {
   &_header {
-    color: #fff;
+    color: $colour_main_green;
     margin-bottom: 1rem;
   }
   &_title {
@@ -83,6 +82,7 @@ export default {
     background-color: #fff;
     border-radius: 0.2rem;
     padding: 0.8rem;
+    @include shadow;
 
     /deep/ {
       * {

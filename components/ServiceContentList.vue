@@ -38,7 +38,6 @@ export default {
         .then((res) => {
           this.items = res.data
           this.contents = res.data.contents
-          console.log(this.contents)
         })
     },
   },
@@ -47,29 +46,19 @@ export default {
 <style lang="scss" scoped>
 .service_contents {
   &-heading {
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-    &::after {
-      margin-top: 0.5rem;
-      background-color: white;
-      border-radius: 0.25rem;
-      content: "";
-      display: block;
-      height: 0.5rem;
-    }
+    @include head_line;
   }
   &-item {
     .service_contents-item-inner {
       display: flex;
-      @media (max-width: 600px) {
+      @include media-mobile() {
         flex-flow: column-reverse;
       }
     }
     &:nth-of-type(even) {
       .service_contents-item-inner {
         flex-flow: row-reverse;
-        @media (max-width: 600px) {
+        @include media-mobile() {
           flex-flow: column-reverse;
         }
       }

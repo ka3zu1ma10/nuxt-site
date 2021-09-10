@@ -22,23 +22,12 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-  background-color: $colour_main_green;
+  background-color: $colour_back_green;
 }
 .page_wrap {
   padding: 1rem 0.5rem;
 }
 .title {
-  color: white;
-  text-align: center;
-  font-size: 3rem;
-  padding-bottom: 0.5rem;
-  &::after {
-    margin-top: 0.5rem;
-    background-color: white;
-    border-radius: 0.25rem;
-    content: "";
-    display: block;
-    height: 0.5rem;
-  }
+  @include head_line;
 }
 </style>

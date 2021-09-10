@@ -15,6 +15,13 @@ export default {
     Header,
     Footer,
   },
+  head() {
+    return{
+          script:[
+      {src:'https://embed.small.chat/T8TTV1Y1JC02E1KFU0RY.js',body:true}
+    ]
+    }
+  }
 }
 </script>
 
@@ -29,7 +36,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-flow: column;
-  background-color: $colour_main_green;
+  background-color: $colour_back_green;
   .page {
     &_wrap {
       width: 100%;

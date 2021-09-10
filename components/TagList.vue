@@ -25,7 +25,7 @@ export default {
   &_item {
     font-size: 0.8rem;
     padding: 0.2rem 0.4rem;
-    background-color: $colour_main_green;
+    background-color: $colour_back_green;
     color: whitesmoke;
     margin-right: 0.4rem;
     border-radius: 0.2rem;

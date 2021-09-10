@@ -47,7 +47,7 @@ export default {
       width: 100%;
       height: auto;
       object-fit: cover;
-      box-shadow: 1rem 1rem rgba(#000, 0.5);
+      @include shadow;
     }
   }
 }

@@ -37,16 +37,16 @@ export default {
 .section {
   padding: 2rem 1rem;
   color: $colour_main_green;
-  background-color: $colour_main_green;
-  color: #fff;
+  background-color: $colour_back_green;
+  color: $colour_main_green;
 
   &_top {
     padding-bottom: 0;
-    color: $colour_main_green;
-    background-color: #fff;
+    color: $colour_back_green;
+    background-color: $colour_main_green;
   }
 }
-@media (max-width: 600px) {
+@include media-mobile() {
   .section {
     padding: 1rem 0.5rem;
   }
