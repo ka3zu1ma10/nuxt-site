@@ -3,13 +3,23 @@
     <ul class="article_list">
       <li v-for="content in contents" :key="content.id" class="article_item">
         <div class="article_item-wraper">
-          <a v-if="content.link" class="article_title" :href="content.url" target="_blank" rel="noopener noreferrer">
+          <a
+            v-if="content.link"
+            class="article_title"
+            :href="content.url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {{ content.title }}
             <svg class="article_title_out" viewBox="0 0 24 24">
               <path :d="iOpenInNew" />
             </svg>
           </a>
-          <nuxt-link v-else class="article_title" :to="`/article/${content.id}`">
+          <nuxt-link
+            v-else
+            class="article_title"
+            :to="`/article/${content.id}`"
+          >
             {{ content.title }}
           </nuxt-link>
           <div class="article_date">
@@ -29,7 +39,7 @@
 <script>
 import axios from "axios"
 import PageLayout from "@/components/PageLayout"
-import { mdiOpenInNew } from '@mdi/js'
+import { mdiOpenInNew } from "@mdi/js"
 
 export default {
   components: {
@@ -47,12 +57,9 @@ export default {
   methods: {
     asyncData() {
       axios
-        .get(
-          "https://max-portfolio.microcms.io/api/v1/article",
-          {
-            headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
-          }
-        )
+        .get("https://max-portfolio.microcms.io/api/v1/article", {
+          headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
+        })
         .then((res) => {
           this.contents = res.data.contents
         })
@@ -85,10 +92,10 @@ export default {
     font-size: 1.5rem;
     display: block;
     padding-bottom: 1.5rem;
-    &_out{
-      width: .8em;
+    &_out {
+      width: 0.8em;
     }
-    &::after{
+    &::after {
       position: absolute;
       top: 0;
       right: 0;

@@ -16,12 +16,12 @@ export default {
     Footer,
   },
   head() {
-    return{
-          script:[
-      {src:'https://embed.small.chat/T8TTV1Y1JC02E1KFU0RY.js',body:true}
-    ]
+    return {
+      script: [
+        { src: "https://embed.small.chat/T8TTV1Y1JC02E1KFU0RY.js", body: true },
+      ],
     }
-  }
+  },
 }
 </script>
 
