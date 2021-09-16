@@ -1,19 +1,19 @@
 <template>
-  <PageLayout title="Blog">
-    <ul class="blog_list">
-      <li v-for="content in contents" :key="content.id" class="blog_item">
-        <div class="blog_item-wraper">
-          <a v-if="content.link" class="blog_title" :href="content.url" target="_blank" rel="noopener noreferrer">
+  <PageLayout title="Article">
+    <ul class="article_list">
+      <li v-for="content in contents" :key="content.id" class="article_item">
+        <div class="article_item-wraper">
+          <a v-if="content.link" class="article_title" :href="content.url" target="_blank" rel="noopener noreferrer">
             {{ content.title }}
-            <svg class="blog_title_out" viewBox="0 0 24 24">
+            <svg class="article_title_out" viewBox="0 0 24 24">
               <path :d="iOpenInNew" />
             </svg>
           </a>
-          <nuxt-link v-else class="blog_title" :to="`/blog/${content.id}`">
+          <nuxt-link v-else class="article_title" :to="`/article/${content.id}`">
             {{ content.title }}
           </nuxt-link>
-          <div class="blog_date">
-            <!-- <TagList class="blog_tags" :tags="param.tags" /> -->
+          <div class="article_date">
+            <!-- <TagList class="article_tags" :tags="param.tags" /> -->
             <div>
               {{ new Date(content.date).getFullYear() }}/{{
                 new Date(content.date).getMonth()
@@ -48,7 +48,7 @@ export default {
     asyncData() {
       axios
         .get(
-          "https://max-portfolio.microcms.io/api/v1/blog",
+          "https://max-portfolio.microcms.io/api/v1/article",
           {
             headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
           }
@@ -61,7 +61,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.blog {
+.article {
   &_list {
     list-style: none;
     padding: 1rem 0;
@@ -115,7 +115,7 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .blog {
+  .article {
     &_list {
       padding: 1rem 0;
     }
