@@ -9,7 +9,7 @@
           <!-- <TagList class="article_tags back-wite" :tags="formatTags" /> -->
           <time>
             {{ new Date(items.date).getFullYear() }}/{{
-              new Date(items.date).getMonth()
+              new Date(items.date).getMonth() + 1
             }}/{{ new Date(items.date).getDate() }}
           </time>
         </div>

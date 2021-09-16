@@ -26,7 +26,7 @@
             <!-- <TagList class="article_tags" :tags="param.tags" /> -->
             <div>
               {{ new Date(content.date).getFullYear() }}/{{
-                new Date(content.date).getMonth()
+                new Date(content.date).getMonth() + 1
               }}/{{ new Date(content.date).getDate() }}
             </div>
           </div>
