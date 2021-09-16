@@ -1,20 +1,20 @@
 <template>
   <main class="page_wrap">
-    <article class="blog">
-      <header class="blog_header">
-        <h2 class="blog_title">
+    <article class="article">
+      <header class="article_header">
+        <h2 class="article_title">
           {{ items.title }}
         </h2>
-        <div class="blog_date">
-          <!-- <TagList class="blog_tags back-wite" :tags="formatTags" /> -->
+        <div class="article_date">
+          <!-- <TagList class="article_tags back-wite" :tags="formatTags" /> -->
           <time>
             {{ new Date(items.date).getFullYear() }}/{{
-              new Date(items.date).getMonth()
+              new Date(items.date).getMonth() + 1
             }}/{{ new Date(items.date).getDate() }}
           </time>
         </div>
       </header>
-      <section class="blog_body" v-html="items.blog" />
+      <section class="article_body" v-html="items.detail" />
     </article>
   </main>
 </template>
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blog {
+.article {
   &_header {
     color: $colour_main_green;
     margin-bottom: 1rem;
@@ -145,7 +145,7 @@ export default {
   }
 }
 @media (max-width: 600px) {
-  .blog {
+  .article {
     &_title {
       font-size: 1.6rem;
     }

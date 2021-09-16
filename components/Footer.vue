@@ -66,7 +66,7 @@
     height: 2rem;
     padding: 0.1rem;
     background-color: #fff;
-    border: .2rem solid $colour_main_green;
+    border: 0.2rem solid $colour_main_green;
     margin: 0 0.5rem;
     @include shadow-active;
   }

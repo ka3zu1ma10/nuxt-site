@@ -1,16 +1,32 @@
 <template>
-  <PageLayout title="Blog">
-    <ul class="blog_list">
-      <li v-for="content in contents" :key="content.id" class="blog_item">
-        <div class="blog_item-wraper">
-          <nuxt-link class="blog_title" :to="`/blog/${content.id}`">
+  <PageLayout title="Article">
+    <ul class="article_list">
+      <li v-for="content in contents" :key="content.id" class="article_item">
+        <div class="article_item-wraper">
+          <a
+            v-if="content.link"
+            class="article_title"
+            :href="content.url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ content.title }}
+            <svg class="article_title_out" viewBox="0 0 24 24">
+              <path :d="iOpenInNew" />
+            </svg>
+          </a>
+          <nuxt-link
+            v-else
+            class="article_title"
+            :to="`/article/${content.id}`"
+          >
             {{ content.title }}
           </nuxt-link>
-          <div class="blog_date">
-            <!-- <TagList class="blog_tags" :tags="param.tags" /> -->
+          <div class="article_date">
+            <!-- <TagList class="article_tags" :tags="param.tags" /> -->
             <div>
               {{ new Date(content.date).getFullYear() }}/{{
-                new Date(content.date).getMonth()
+                new Date(content.date).getMonth() + 1
               }}/{{ new Date(content.date).getDate() }}
             </div>
           </div>
@@ -23,6 +39,7 @@
 <script>
 import axios from "axios"
 import PageLayout from "@/components/PageLayout"
+import { mdiOpenInNew } from "@mdi/js"
 
 export default {
   components: {
@@ -31,6 +48,7 @@ export default {
   data() {
     return {
       contents: [],
+      iOpenInNew: mdiOpenInNew,
     }
   },
   mounted() {
@@ -39,16 +57,10 @@ export default {
   methods: {
     asyncData() {
       axios
-        .get(
-          // your-service-id部分は自分のサービスidに置き換えてください
-          "https://max-portfolio.microcms.io/api/v1/blog",
-          {
-            // your-api-key部分は自分のapi-keyに置き換えてください
-            headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
-          }
-        )
+        .get("https://max-portfolio.microcms.io/api/v1/article", {
+          headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
+        })
         .then((res) => {
-          console.log(res.data.contents)
           this.contents = res.data.contents
         })
     },
@@ -56,7 +68,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.blog {
+.article {
   &_list {
     list-style: none;
     padding: 1rem 0;
@@ -80,6 +92,20 @@ export default {
     font-size: 1.5rem;
     display: block;
     padding-bottom: 1.5rem;
+    &_out {
+      width: 0.8em;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+      content: "";
+      background-color: transparent;
+    }
   }
 
   &_date {
@@ -96,7 +122,7 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .blog {
+  .article {
     &_list {
       padding: 1rem 0;
     }
