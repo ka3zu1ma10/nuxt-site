@@ -3,7 +3,13 @@
     <ul class="blog_list">
       <li v-for="content in contents" :key="content.id" class="blog_item">
         <div class="blog_item-wraper">
-          <nuxt-link class="blog_title" :to="`/blog/${content.id}`">
+          <a v-if="content.link" class="blog_title" :href="content.url" target="_blank" rel="noopener noreferrer">
+            {{ content.title }}
+            <svg class="blog_title_out" viewBox="0 0 24 24">
+              <path :d="iOpenInNew" />
+            </svg>
+          </a>
+          <nuxt-link v-else class="blog_title" :to="`/blog/${content.id}`">
             {{ content.title }}
           </nuxt-link>
           <div class="blog_date">
@@ -23,6 +29,7 @@
 <script>
 import axios from "axios"
 import PageLayout from "@/components/PageLayout"
+import { mdiOpenInNew } from '@mdi/js'
 
 export default {
   components: {
@@ -31,6 +38,7 @@ export default {
   data() {
     return {
       contents: [],
+      iOpenInNew: mdiOpenInNew,
     }
   },
   mounted() {
@@ -40,15 +48,12 @@ export default {
     asyncData() {
       axios
         .get(
-          // your-service-id部分は自分のサービスidに置き換えてください
           "https://max-portfolio.microcms.io/api/v1/blog",
           {
-            // your-api-key部分は自分のapi-keyに置き換えてください
             headers: { "X-API-KEY": "3b4f407a-57ef-4651-9f22-e77f3f1119cd" },
           }
         )
         .then((res) => {
-          console.log(res.data.contents)
           this.contents = res.data.contents
         })
     },
@@ -80,6 +85,20 @@ export default {
     font-size: 1.5rem;
     display: block;
     padding-bottom: 1.5rem;
+    &_out{
+      width: .8em;
+    }
+    &::after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+      content: "";
+      background-color: transparent;
+    }
   }
 
   &_date {
